@@ -1,4 +1,3 @@
-import React from "react";
 import Router from "next/router";
 import styles from "../styles/Post.module.css";
 import ReactMarkdown from "react-markdown"; //alternative to dangerouslySetInnerHTML
@@ -19,7 +18,7 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
   return (
     <div
       className={styles.card}
-      onClick={() => Router.push("/p/[id]", `/p/${post.id}`)}
+      onClick={() => Router.push("/posts/[id]", `/posts/${post.id}`)}
     >
       <h2>{post.title}</h2>
       <p>By {authorName}</p>
