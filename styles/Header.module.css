@@ -3,6 +3,8 @@
   height: 4rem;
   padding: 2rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav__left {
