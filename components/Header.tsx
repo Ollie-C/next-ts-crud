@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "../styles/Header.module.css";
 import { signOut, useSession } from "next-auth/react";
+import { ReactFragment } from "react";
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
     </div>
   );
 
-  let right = null;
+  let right: any;
 
   if (status === "loading") {
     <div className={styles.nav__right}>

@@ -22,5 +22,6 @@
   },
   "devDependencies": {
     "prisma": "^4.9.0"
-  }
+  },
+  "postinstall": "prisma generate"
 }

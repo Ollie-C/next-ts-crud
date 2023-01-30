@@ -1,14 +1,14 @@
-import { GetServerSideProps } from "next";
+// import { GetServerSideProps } from "next";
 import ReactMarkdown from "react-markdown";
 import Router from "next/router";
 import { PostProps } from "../../components/Post";
 import { useSession } from "next-auth/react";
 import { prisma } from "../../lib/prisma";
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps = async (context: any) => {
   const post = await prisma.post.findUnique({
     where: {
-      id: String(params?.id),
+      id: String(context.params?.id),
     },
     include: {
       author: {
