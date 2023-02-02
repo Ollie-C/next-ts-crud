@@ -28,7 +28,7 @@ const Home: React.FC<Props> = (props) => {
     <>
       <Header />
       <main className={styles.main}>
-        <h1>Public Feed</h1>
+        <h1>Guestbook</h1>
         {props.feed.map((post) => (
           <div key={post.id} className={styles.post}>
             <Post post={post} />
